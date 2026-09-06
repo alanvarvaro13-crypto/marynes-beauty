@@ -240,7 +240,7 @@ text-gray-300
 
 >
 
-Book your appointment today and experience a luxury beauty treatment designed especially for you.
+Book your appointment today and experience a beauty treatment designed especially for you.
 
 </p>
 

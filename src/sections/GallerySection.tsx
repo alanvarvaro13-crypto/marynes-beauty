@@ -23,7 +23,7 @@ const gallery = [
 
 {
 image:image01,
-title:"Luxury Lashes",
+title:"Lashes",
 category:"Lashes"
 },
 

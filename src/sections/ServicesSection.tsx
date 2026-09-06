@@ -32,7 +32,7 @@ title:"Lashes",
 logo:lashesLogo,
 
 description:
-"Luxury eyelash extensions designed to enhance your eyes with elegance."
+"eyelash extensions designed to enhance your eyes with elegance."
 
 },
 
@@ -346,7 +346,7 @@ text-gray-500
 >
 
 
-Discover luxury beauty treatments
+Discover beauty treatments
 created specially to highlight your natural beauty.
 
 

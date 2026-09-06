@@ -43,7 +43,7 @@ text:
 
 {
 icon:<Gem size={26}/>,
-title:"Luxury Experience",
+title:"Experience",
 text:
 "A comfortable and relaxing beauty environment."
 }
@@ -374,7 +374,7 @@ text-[#b88686]
 
 >
 
-Luxury Beauty Studio
+Beauty Studio
 
 </p>
 

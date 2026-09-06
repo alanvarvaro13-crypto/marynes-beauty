@@ -463,7 +463,7 @@ text-white/80
 
 <Sparkles size={16}/>
 
-Luxury Beauty Studio
+Beauty Studio
 
 </div>
 
