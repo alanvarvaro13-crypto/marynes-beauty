@@ -13,8 +13,6 @@ import workingTwo from "../assets/images/about/marynes-working-02.jpeg";
 
 
 
-
-
 const features = [
 
 {
@@ -53,7 +51,6 @@ text:
 
 
 
-
 const stats=[
 
 {
@@ -78,9 +75,7 @@ label:"Dedication"
 
 
 
-
 function AboutSection(){
-
 
 
 return(
@@ -101,9 +96,6 @@ py-32
 >
 
 
-{/* BACKGROUND */}
-
-
 <div
 
 className="
@@ -118,6 +110,7 @@ blur-[150px]
 "
 
 />
+
 
 
 <div
@@ -139,9 +132,6 @@ blur-[150px]
 
 
 
-
-
-
 <div
 
 className="
@@ -154,16 +144,12 @@ px-6
 >
 
 
-
-
-
-
 <div
 
 className="
 grid
 items-center
-gap-20
+gap-16
 lg:grid-cols-2
 "
 
@@ -171,14 +157,7 @@ lg:grid-cols-2
 
 
 
-
-
-
-
-
-
 {/* IMAGES */}
-
 
 
 <motion.div
@@ -203,7 +182,10 @@ once:true
 
 className="
 relative
-h-[620px]
+mx-auto
+h-[600px]
+w-full
+max-w-[450px]
 "
 
 
@@ -211,7 +193,7 @@ h-[620px]
 
 
 
-
+{/* MAIN IMAGE */}
 
 
 <motion.div
@@ -222,13 +204,12 @@ scale:1.03
 }}
 
 
-
 className="
 absolute
 left-0
-top-8
-h-[520px]
-w-[380px]
+top-0
+h-[500px]
+w-[360px]
 overflow-hidden
 rounded-[55px]
 shadow-[0_40px_80px_rgba(0,0,0,.18)]
@@ -250,8 +231,7 @@ w-full
 object-cover
 "
 
- />
-
+/>
 
 
 </motion.div>
@@ -261,7 +241,7 @@ object-cover
 
 
 
-
+{/* SMALL IMAGE */}
 
 
 
@@ -269,7 +249,7 @@ object-cover
 
 
 animate={{
-y:[0,-18,0]
+y:[0,-10,0]
 }}
 
 
@@ -288,16 +268,17 @@ scale:1.05
 
 className="
 absolute
-bottom-16
+bottom-10
 right-0
-h-[280px]
-w-[230px]
+h-[200px]
+w-[160px]
 overflow-hidden
-rounded-[45px]
-border-[10px]
+rounded-[35px]
+border-[8px]
 border-white
 shadow-2xl
 "
+
 
 >
 
@@ -314,7 +295,8 @@ w-full
 object-cover
 "
 
- />
+/>
+
 
 
 </motion.div>
@@ -325,6 +307,8 @@ object-cover
 
 
 
+{/* LABEL */}
+
 
 
 <motion.div
@@ -332,7 +316,7 @@ object-cover
 
 initial={{
 opacity:0,
-y:30
+y:20
 }}
 
 
@@ -351,14 +335,15 @@ once:true
 className="
 absolute
 bottom-0
-left-8
+left-5
 rounded-full
 bg-white/90
 backdrop-blur-xl
-px-8
-py-5
+px-7
+py-4
 shadow-xl
 "
+
 
 >
 
@@ -385,8 +370,6 @@ Beauty Studio
 
 
 
-
-
 </motion.div>
 
 
@@ -396,16 +379,7 @@ Beauty Studio
 
 
 
-
-
-
-
-
-
-
-
 {/* TEXT */}
-
 
 
 
@@ -429,11 +403,7 @@ once:true
 }}
 
 
-
 >
-
-
-
 
 
 
@@ -454,12 +424,10 @@ text-[#b88686]
 
 <Sparkles size={18}/>
 
-
 About Our Studio
 
 
 </div>
-
 
 
 
@@ -484,7 +452,6 @@ md:text-6xl
 Creating Beauty,
 
 <br/>
-
 
 Confidence & Elegance
 
@@ -530,11 +497,6 @@ beauty services designed to make you feel confident, elegant and radiant.
 
 
 
-
-
-
-
-
 <div
 
 className="
@@ -544,15 +506,12 @@ gap-5
 sm:grid-cols-2
 "
 
-
 >
 
 
 {
 
-
 features.map((item)=>(
-
 
 
 <motion.div
@@ -565,7 +524,6 @@ whileHover={{
 y:-10,
 scale:1.03
 }}
-
 
 
 className="
@@ -589,14 +547,9 @@ text-[#b88686]
 
 >
 
-
 {item.icon}
 
-
 </div>
-
-
-
 
 
 <h3
@@ -608,12 +561,9 @@ text-gray-800
 
 >
 
-
 {item.title}
 
-
 </h3>
-
 
 
 
@@ -628,16 +578,12 @@ text-gray-500
 
 >
 
-
 {item.text}
-
 
 </p>
 
 
-
 </motion.div>
-
 
 
 ))
@@ -646,13 +592,7 @@ text-gray-500
 }
 
 
-
 </div>
-
-
-
-
-
 
 
 
@@ -674,9 +614,7 @@ gap-5
 
 {
 
-
 stats.map((item)=>(
-
 
 
 <div
@@ -709,7 +647,6 @@ text-[#b88686]
 
 {item.number}
 
-
 </h3>
 
 
@@ -724,13 +661,10 @@ text-gray-500
 
 {item.label}
 
-
 </p>
 
 
-
 </div>
-
 
 
 ))
@@ -739,12 +673,7 @@ text-gray-500
 }
 
 
-
 </div>
-
-
-
-
 
 
 
@@ -755,23 +684,10 @@ text-gray-500
 
 
 
-
-
-
-
-
 </div>
 
 
-
-
-
-
 </div>
-
-
-
-
 
 
 
@@ -781,7 +697,6 @@ text-gray-500
 )
 
 }
-
 
 
 export default AboutSection;

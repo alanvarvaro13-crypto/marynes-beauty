@@ -88,12 +88,9 @@ return(
 <>
 
 
-{/* MODAL */}
-
+{/* MAIN MODAL */}
 
 <div
-
-onClick={close}
 
 className="
 fixed
@@ -104,7 +101,8 @@ items-center
 justify-center
 bg-black/70
 backdrop-blur-xl
-p-5
+p-3
+overflow-y-auto
 "
 
 >
@@ -112,24 +110,36 @@ p-5
 
 <motion.div
 
-onClick={(e)=>e.stopPropagation()}
 
 initial={{
 opacity:0,
-scale:.85
+scale:.92
 }}
+
 
 animate={{
 opacity:1,
 scale:1
 }}
 
+
+transition={{
+duration:.25
+}}
+
+
+
+onClick={(e)=>e.stopPropagation()}
+
+
+
 className="
 relative
 w-full
 max-w-6xl
-overflow-hidden
-rounded-[45px]
+max-h-[95vh]
+overflow-y-auto
+rounded-[35px]
 bg-white
 shadow-2xl
 "
@@ -138,24 +148,50 @@ shadow-2xl
 
 
 
+
+
+{/* CLOSE BUTTON */}
+
+
 <button
+
 
 onClick={close}
 
+
 className="
-absolute
-right-6
-top-6
-z-20
+
+sticky
+top-4
+float-right
+mr-4
+mt-4
+z-[100]
+
+flex
+items-center
+justify-center
+
 rounded-full
+
 bg-white
-p-3
+
+w-12
+h-12
+
 shadow-xl
+
+hover:scale-110
+
+transition
+
 "
 
 >
 
-<X/>
+
+<X size={24}/>
+
 
 </button>
 
@@ -163,12 +199,18 @@ shadow-xl
 
 
 
+
+{/* HEADER */}
+
+
 <div
 
 className="
 bg-[#faf4f2]
-p-8
+p-6
+md:p-10
 text-center
+clear-both
 "
 
 >
@@ -183,6 +225,8 @@ items-center
 gap-3
 uppercase
 tracking-[5px]
+text-xs
+md:text-sm
 text-[#b88686]
 "
 
@@ -190,9 +234,13 @@ text-[#b88686]
 
 <Sparkles size={18}/>
 
+
 {result.category}
 
+
 </div>
+
+
 
 
 
@@ -200,16 +248,20 @@ text-[#b88686]
 
 className="
 mt-4
-text-4xl
+text-3xl
+md:text-5xl
 font-black
 text-gray-800
 "
 
 >
 
+
 {result.title}
 
+
 </h2>
+
 
 
 </div>
@@ -221,13 +273,28 @@ text-gray-800
 
 
 
+{/* IMAGES */}
+
+
+
 <div
 
 className="
+
 grid
-gap-8
-p-8
+
+grid-cols-1
+
 md:grid-cols-2
+
+gap-5
+
+md:gap-8
+
+p-5
+
+md:p-8
+
 "
 
 >
@@ -241,89 +308,151 @@ md:grid-cols-2
 
 <div
 
+
 onClick={()=>setZoomImage(result.before)}
 
+
 className="
+
 relative
+
 cursor-pointer
+
 overflow-hidden
-rounded-[35px]
+
+rounded-[30px]
+
 shadow-xl
+
 group
+
 "
+
 
 >
 
 
 <img
 
+
 src={result.before}
+
 
 alt="before"
 
+
 className="
-h-[420px]
+
 w-full
+
+h-[260px]
+
+md:h-[420px]
+
 object-cover
+
 group-hover:scale-105
+
 transition
+
 duration-500
+
 "
+
 
 />
 
 
 
+
+
 <div
 
+
 className="
+
 absolute
-top-5
-left-5
+
+top-4
+
+left-4
+
 rounded-full
+
 bg-black/70
-px-6
-py-3
+
+px-5
+
+py-2
+
 text-white
+
 font-bold
+
+text-sm
+
 "
+
 
 >
 
 BEFORE
 
+
 </div>
+
+
+
+
 
 
 
 <div
 
+
 className="
+
 absolute
-bottom-5
-right-5
+
+bottom-4
+
+right-4
+
 rounded-full
+
 bg-white
-px-5
-py-3
+
+px-4
+
+py-2
+
 flex
+
 gap-2
+
 items-center
+
 shadow-xl
+
+text-sm
+
 "
+
 
 >
 
-<ZoomIn size={18}/>
+
+<ZoomIn size={16}/>
+
 
 Zoom
 
-</div>
-
-
 
 </div>
 
+
+
+</div>
 
 
 
@@ -335,93 +464,149 @@ Zoom
 {/* AFTER */}
 
 
+
 <div
+
 
 onClick={()=>setZoomImage(result.after)}
 
+
 className="
+
 relative
+
 cursor-pointer
+
 overflow-hidden
-rounded-[35px]
+
+rounded-[30px]
+
 shadow-xl
+
 group
+
 "
+
 
 >
 
 
 <img
 
+
 src={result.after}
+
 
 alt="after"
 
+
 className="
-h-[420px]
+
 w-full
+
+h-[260px]
+
+md:h-[420px]
+
 object-cover
+
 group-hover:scale-105
+
 transition
+
 duration-500
+
 "
+
 
 />
 
 
 
+
+
+
 <div
 
+
 className="
+
 absolute
-top-5
-right-5
+
+top-4
+
+right-4
+
 rounded-full
+
 bg-[#d59aa4]
-px-6
-py-3
+
+px-5
+
+py-2
+
 text-white
+
 font-bold
+
+text-sm
+
 "
+
 
 >
 
 AFTER
 
+
 </div>
+
+
 
 
 
 <div
 
+
 className="
+
 absolute
-bottom-5
-right-5
+
+bottom-4
+
+right-4
+
 rounded-full
+
 bg-white
-px-5
-py-3
+
+px-4
+
+py-2
+
 flex
+
 gap-2
+
 items-center
+
 shadow-xl
+
+text-sm
+
 "
+
 
 >
 
-<ZoomIn size={18}/>
+
+<ZoomIn size={16}/>
+
 
 Zoom
 
-</div>
-
-
 
 </div>
-
-
-
 
 
 
@@ -432,72 +617,139 @@ Zoom
 
 
 
+</div>
+
+
+
+
+
+
+
+
+
+{/* DESCRIPTION */}
 
 
 
 <div
 
+
 className="
-px-10
-pb-10
+
+px-6
+
+md:px-10
+
+pb-8
+
 "
 
+
 >
+
 
 
 <p
 
+
 className="
-text-lg
+
+text-base
+
+md:text-lg
+
+leading-relaxed
+
 text-gray-600
+
 "
+
 
 >
 
+
 {result.description}
+
 
 </p>
 
 
 
+
+
+
+
 <motion.a
+
 
 href={whatsapp}
 
+
 target="_blank"
 
+
 rel="noreferrer"
+
+
 
 whileHover={{
 scale:1.05
 }}
 
+
+
 className="
+
+
 mt-8
+
+
 flex
+
 justify-center
+
 items-center
+
 gap-3
+
+
 rounded-full
+
+
 bg-green-500
-px-10
+
+
+px-8
+
 py-4
+
+
 text-white
+
+
 font-semibold
+
+
 shadow-xl
+
+
 "
+
 
 >
 
 
 <MessageCircle/>
 
+
 Book This Treatment
+
 
 <ArrowRight/>
 
 
 </motion.a>
+
 
 
 </div>
@@ -520,7 +772,8 @@ Book This Treatment
 
 
 
-{/* ZOOM CORREGIDO */}
+{/* ZOOM IMAGE */}
+
 
 
 {
@@ -530,91 +783,131 @@ zoomImage && (
 
 <div
 
+
 onClick={()=>setZoomImage(null)}
 
+
+
 className="
+
 fixed
+
 inset-0
+
 z-[200]
+
 flex
+
 items-center
+
 justify-center
+
 bg-black/90
+
+p-4
+
 "
+
 
 >
-
-
-<motion.div
-
-initial={{
-scale:.6,
-opacity:0
-}}
-
-animate={{
-scale:1,
-opacity:1
-}}
-
-transition={{
-duration:.35
-}}
-
-onClick={(e)=>e.stopPropagation()}
-
-className="
-relative
-flex
-items-center
-justify-center
-w-[80vw]
-h-[80vh]
-"
-
->
-
-
-<img
-
-src={zoomImage}
-
-alt="zoom"
-
-className="
-w-full
-h-full
-object-contain
-rounded-3xl
-shadow-[0_0_100px_rgba(255,255,255,.4)]
-"
-
-/>
 
 
 
 <button
 
+
 onClick={()=>setZoomImage(null)}
 
+
 className="
+
 absolute
-right-[-20px]
-top-[-20px]
+
+top-6
+
+right-6
+
+z-[210]
+
 rounded-full
+
 bg-white
-p-4
+
+p-3
+
 shadow-xl
+
 "
+
 
 >
 
+
 <X size={30}/>
+
 
 </button>
 
 
-</motion.div>
+
+
+
+
+<motion.img
+
+
+initial={{
+
+scale:.7,
+
+opacity:0
+
+}}
+
+
+
+animate={{
+
+scale:1,
+
+opacity:1
+
+}}
+
+
+
+transition={{
+
+duration:.3
+
+}}
+
+
+
+src={zoomImage}
+
+
+alt="zoom"
+
+
+className="
+
+max-w-[95vw]
+
+max-h-[85vh]
+
+object-contain
+
+rounded-3xl
+
+shadow-[0_0_100px_rgba(255,255,255,.4)]
+
+"
+
+
+/>
+
+
 
 
 </div>

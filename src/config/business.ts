@@ -14,8 +14,8 @@ export const business = {
   },
 
   location: {
-    address: "Rhode Island, Jhonston",
-    city: "Massachussets",
+    address: "",
+    city: "Jhonston.RI 02919",
   },
 
   hours: {

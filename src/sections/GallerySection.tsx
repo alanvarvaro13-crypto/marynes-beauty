@@ -11,9 +11,9 @@ import {
 
 import image01 from "../assets/images/gallery/result-01.jpeg";
 import image02 from "../assets/images/gallery/result-02.jpeg";
-import image03 from "../assets/images/gallery/result-03.jpeg";
+
 import image04 from "../assets/images/gallery/result-04.jpeg";
-import image05 from "../assets/images/gallery/result-05.jpeg";
+
 
 
 
@@ -33,11 +33,6 @@ title:"Perfect Brows",
 category:"Brows"
 },
 
-{
-image:image03,
-title:"Skin Transformation",
-category:"Skin"
-},
 
 {
 image:image04,
@@ -45,11 +40,6 @@ title:"Beauty Enhancement",
 category:"Beauty"
 },
 
-{
-image:image05,
-title:"Premium Result",
-category:"Lips"
-}
 
 ];
 
